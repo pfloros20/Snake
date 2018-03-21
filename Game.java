@@ -99,7 +99,7 @@ public class Game extends JComponent implements KeyListener, Runnable{
 		window.setUndecorated(true);
 		window.setSize(WIDTH,HEIGHT);
 		window.setResizable(false);
-		Color c=new Color(54,111,171);//new Color(63,63,63);
+		Color c=new Color(54,111,171);
 		window.getContentPane().setBackground(c);
 		window.getContentPane().setForeground(Color.WHITE);
 		window.add(game);
@@ -115,7 +115,7 @@ public class Game extends JComponent implements KeyListener, Runnable{
 		Color c,r;
 		if(!paused){
 			c=new Color(37,255,76);
-			r=new Color(255,34,76);//new Color(37,116,166);
+			r=new Color(255,34,76);
 		}
 		else{
 			c=Color.GRAY;
