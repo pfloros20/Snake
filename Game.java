@@ -14,6 +14,7 @@ import java.io.File;
 import javax.swing.JOptionPane;
 import java.net.UnknownHostException;
 import java.net.InetAddress;
+import java.awt.Toolkit;
 public class Game extends JComponent implements KeyListener, Runnable{
 	public static final int WIDTH=800;
 	public static final int HEIGHT=600;
@@ -106,7 +107,9 @@ public class Game extends JComponent implements KeyListener, Runnable{
 		window.setLocationRelativeTo(null);
 		window.setVisible(true);
 	}
-	public void paintComponent(Graphics g){super.paintComponent(g);	
+	public void paintComponent(Graphics g){
+		super.paintComponent(g);
+		Toolkit.getDefaultToolkit().sync();	
 		g.setFont(new Font("TimesRoman",Font.PLAIN,20));
 		g.drawString("Score: "+score,5,20);
 		Color c,r;
